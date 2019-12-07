@@ -1,0 +1,35 @@
+/* Header */
+#logo_header
+{
+	float: left;
+}
+#id_utilisateur
+{
+	text-align: right;
+}
+#presentation
+{
+	clear: both;
+}
+
+/* Section acteurs */
+#acteurs
+{
+	border: 2px gray solid;
+}
+#acteur1, #acteur2, #acteur3, #acteur4, #acteur5, #acteur6
+{
+	border: 2px red solid;
+}
+#lirelasuite
+{
+	text-align: right;
+}
+
+
+
+/* Footer */
+#footer
+{
+	text-align: center;
+}
