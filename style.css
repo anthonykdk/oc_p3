@@ -1,25 +1,44 @@
-/* BONNE STRUCTURATION */
+@charset "UTF-8";
+/* CSS Document */
+/* Page index.html */
 body {	
+	background-color: #F8F8F8;
 }
 
-header {	
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: white;
+	border: 1px solid #959595;
+	
+	
 }
 
 figure {
 }
 
 
-#logo_header 
-{
-		float: left;
+#logo_header {
+	width: 120px;
+	height: 120px;
+	margin-top: auto;
+	margin-bottom: auto;
+
+	
+	
 }
 
-img {
-}
-
-#affichage_nom_prenom_utilisateur 
-{
+#nom_prenom_utilisateur {
 	display: none;
+}
+
+
+#logo_login 
+{
+	width: 30px;
+	height: 30px;
+
 }
 
 login 
@@ -28,6 +47,10 @@ login
 }
 
 #formulaire_identification {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 20px;
+	
 }
 
 #username {
@@ -39,12 +62,13 @@ button {
 }
 
 p {
+	margin-left: 40px;
 }
 
 
 #creation_compte 
 {
-		display: none;
+	display: none;
 }
 
 #name {
@@ -62,40 +86,77 @@ p {
 #contenu_apres_login {
 }
 
+#titre_gbaf_subheader {
+	margin-top: 40px;
+}
+
 #section_presentation 
 {
-		clear: both;
+	clear: both;
+
 }
 
-h1 {
-}
-
-#section_acteurs 
+#image_presentation
 {
-		border: 2px gray solid;
+	width: 100%;
+	height: 40%;
+	border: 3px dotted #959595;
+	margin-top: 30px;
+}
+
+h1, h2, h3 {
+	font-size: 1.2em;
+	margin-left: 40px;
+}
+
+#titre_section_acteurs
+{
+	text-align: center;
+	margin-top: 60px;
+}
+#description_partenaires_acteurs 
+{
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 60px;
+}
+a {
+	margin-left: 40px;
+}
+
+#section_acteurs {
 }
 
 
-h2 {
+#conteneur_acteurs {
+	display: flex;
+	flex-direction: column;
+	border: 2px dashed #959595;
 }
 
 .bloc_acteur 
 {
-		border: 2px red solid;
+	border: 1px #959595 solid;
 }
 
-h3 {
+
+#logo_acteur1, #logo_acteur2, #logo_acteur3, #logo_acteur4 
+{
+	width: 30%;
+	height: 30%;
+	border: 1px solid black;
 }
 
-a {
-}
+
 
 #section_footer 
 {
 	text-align: center;
+	margin-top: 40px;
 
 }
 
+/* Page acteur.html */
 
 
 
