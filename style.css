@@ -1,84 +1,103 @@
 /* BONNE STRUCTURATION */
-body {
-	
-
-
+body {	
 }
 
-header {
-	
+header {	
 }
 
-#logo_header {
-
+figure {
 }
 
-login {
-	text-align: right;
-}
 
-#section_acteurs {
-	
-}
-
-acteur1, acteur2, acteur3, acteur4, acteur5, acteur6 {
-	
-}
-
-h1 {
-	
-}
-
-h2 {
-	
-}
-
-h3 {
-	
-}
-
-p {
-	
+#logo_header 
+{
+		float: left;
 }
 
 img {
-	
 }
 
-footer {
-	
-}
-
-
-/* ANCIEN CODE */
-
-/* Header */
-#logo_header
+#affichage_nom_prenom_utilisateur 
 {
-	float: left;
+	display: none;
 }
 
-#presentation
-{
-	clear: both;
-}
-
-/* Section acteurs */
-#acteurs
-{
-	border: 2px gray solid;
-}
-#acteur1, #acteur2, #acteur3, #acteur4, #acteur5, #acteur6
-{
-	border: 2px red solid;
-}
-#lirelasuite
+login 
 {
 	text-align: right;
 }
 
-/* Footer */
-#footer
+#formulaire_identification {
+}
+
+#username {
+}
+#password {
+}
+
+button {
+}
+
+p {
+}
+
+
+#creation_compte 
+{
+		display: none;
+}
+
+#name {
+}
+
+#firstname {
+}
+
+#secretquestion {
+}
+
+#answer_secretquestion {
+}
+
+#contenu_apres_login {
+}
+
+#section_presentation 
+{
+		clear: both;
+}
+
+h1 {
+}
+
+#section_acteurs 
+{
+		border: 2px gray solid;
+}
+
+
+h2 {
+}
+
+.bloc_acteur 
+{
+		border: 2px red solid;
+}
+
+h3 {
+}
+
+a {
+}
+
+#section_footer 
 {
 	text-align: center;
+
 }
+
+
+
+
+
+

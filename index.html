@@ -13,17 +13,61 @@
 			<figure id="logo_header">
 				<img src="images/logo.png" alt="logo de GBAF" />
 			</figure>
-		<div id="nom_prenom_utilisateur">
-			<input>Nom d'utilisateur</input>
-			<input>Mot de passe</input>
-			<login>Nom et pr&eacute;nom</login>
 
+		<div id="affichage_nom_prenom_utilisateur">
+			<login>Nom et prénom</login>
 		</div>
+
+		<div id="formulaire_identification">
+			<label for="username">Identifiant :</label>
+			<input type="text" id="username" name="username" required 
+			minlength="4" maxlength="20" size="20">
+
+			<label for="password">Mot de passe :</label>
+			<input type="password" id="password" name="password" required 
+			minlength="4" maxlength="20" size="20">
+			<button>Valider</button>
+			<p>
+				Pas encore de compte ? <a href="#">Créer un compte</a>
+			</p>
+		</div>
+
+		<div id="creation_compte">
+			<p>
+				Créer un compte
+			</p>
+			<label for="name">Nom :</label>
+			<input type="text" id="name" name="name" required 
+			minlength="4" maxlength="20" size="20">
+
+			<label for="firstname">Prénom :</label>
+			<input type="text" id="firstname" name="firstname" required 
+			minlength="4" maxlength="20" size="20">
+
+			<label for="username">Identifiant :</label>
+			<input type="text" id="username" name="username" required 
+			minlength="4" maxlength="20" size="20">
+
+			<label for="password">Mot de passe :</label>
+			<input type="password" id="password" name="password" required 
+			minlength="4" maxlength="20" size="20">
+
+			<label for="secretquestion">Question secrète :</label>
+			<input type="text" id="secretquestion" name="secretquestion" required 
+			minlength="4" maxlength="20" size="20">
+
+			<label for="answer_secretquestion">Réponse à la question secrète :</label>
+			<input type="text" id="answer_secretquestion" name="answer_secretquestion" required 
+			minlength="4" maxlength="20" size="20">
+
+			<button>Valider</button>
+		</div>
+
 		</header>
 
 		<div id="contenu_apres_login">
 <!-- Section presentation -->
-		<section id="presentation">
+		<section id="section_presentation">
 			<h1>Le Groupement Banque Assurance Français, Représentant de la profession bancaire et des assureurs en France.</h1>
 			<figure>
 				<img src="images/illustration_500x197.jpg" alt="illustration de presentation" />
@@ -32,11 +76,11 @@
 
 <!-- Section acteurs -->
 		<section id="section_acteurs">
-			<h2>Les partenaires et acteurs du secteur bancaire</h2>
+			<h2>Les partenaires et acteurs du secteur bancaire.</h2>
 			<p>
 				Nous vous proposons un point d’entrée unique, répertoriant un grand nombre d’informations sur les partenaires et acteurs du groupe ainsi que sur les produits et services bancaires et financiers :
 			</p>
-				<div class="acteur">
+				<div class="bloc_acteur">
 					<figure>
 						<img src="images/logo_acteur1.png" id="logo_acteur1" alt="logo de formation and co" />
 					</figure>
@@ -102,7 +146,7 @@
 		</section>
 		</div>
 <!-- Pied de page -->
-		<section id="footer">
+		<section id="section_footer">
 			<a href="#">Mentions l&eacute;gales</a>
 			<a href="#">Contact</a>
 		</section>
