@@ -1,12 +1,63 @@
+/* BONNE STRUCTURATION */
+body {
+	
+
+
+}
+
+header {
+	
+}
+
+#logo_header {
+
+}
+
+login {
+	text-align: right;
+}
+
+#section_acteurs {
+	
+}
+
+acteur1, acteur2, acteur3, acteur4, acteur5, acteur6 {
+	
+}
+
+h1 {
+	
+}
+
+h2 {
+	
+}
+
+h3 {
+	
+}
+
+p {
+	
+}
+
+img {
+	
+}
+
+footer {
+	
+}
+
+
+/* ANCIEN CODE */
+
 /* Header */
 #logo_header
 {
 	float: left;
 }
-#id_utilisateur
-{
-	text-align: right;
-}
+
 #presentation
 {
 	clear: both;
@@ -25,8 +76,6 @@
 {
 	text-align: right;
 }
-
-
 
 /* Footer */
 #footer

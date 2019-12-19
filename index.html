@@ -1,83 +1,111 @@
-	<!-- Entête de la page -->
 <!DOCTYPE html> 
 <html>
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="style.css" />
-		<title>Acceuil - Extranet de GBAF</title>
+		<title>Extranet de GBAF</title>
 	</head>
 
 <!-- Corps de la page-->
-<body>
-<header>
-	<div id="logo_header"><figure><img src="images/logo_100x127.png" alt="logo de GBAF" /></figure></div>
-	<section id="id_utilisateur"><br /> Nom et pr&eacute;nom</section>
-</header>
+	<body>
+<!-- Header -->
+		<header>
+			<figure id="logo_header">
+				<img src="images/logo.png" alt="logo de GBAF" />
+			</figure>
+		<div id="nom_prenom_utilisateur">
+			<input>Nom d'utilisateur</input>
+			<input>Mot de passe</input>
+			<login>Nom et pr&eacute;nom</login>
 
+		</div>
+		</header>
+
+		<div id="contenu_apres_login">
 <!-- Section presentation -->
-<section id="presentation">
-	<hr />
-	<h1>texte pr&eacute;sentation du GBAF et du site</h1>
-	<p>
-	<img src="images/illustration_500x197.jpg" alt="illustration de presentation" />
-	</p>
-</section>
-<hr>
+		<section id="presentation">
+			<h1>Le Groupement Banque Assurance Français, Représentant de la profession bancaire et des assureurs en France.</h1>
+			<figure>
+				<img src="images/illustration_500x197.jpg" alt="illustration de presentation" />
+			</figure>
+		</section>
 
-<!-- Section sur les acteurs -->
-<br />
-	<h2>texte acteurs et partenaires<br />...</h2>
-<br />
-<section id="acteurs">
-	<div id="acteur1"<p>
-		<p>
-		<figure><img src="images/logo_acteur1_250x66.png" class="imageflottante" alt="logo de formation and co" />
-		</figure>
-		<h3>contenu textuel ... lien<a href="lirelasuiteacteur1"><div class="lirelasuite">Lire la suite</a></div>
-		</h3>
-		</p>
-	</div>
-	<div id="acteur2">
-		<p>
-		<figure><img src="images/logo_acteur2_250x68.png" class="imageflottante" alt="logo de protectpeople" />
-		</figure>
-		<h3>contenu textuel ... lien <a href="lirelasuiteacteur2">Lire la suite</a>
-		</h3>
-		</p>
-	</div>
-	<div id="acteur3">
-		<p>
-		<figure><img src="images/logo_acteur3_250x111.png" class="imageflottante" alt="logo de dsa france" />
-		</figure>
-		<h3>contenu textuel ... lien <a href="lirelasuiteacteur3">Lire la suite</a>
-		</h3>
-		</p>
-	</div>
-	<div id="acteur4">
-		<p>
-		<figure>
-		<img src="images/logo_acteur4_250x121.png" class="imageflottante" alt="logo de dse" />
-		</figure>
-		<h3>contenu textuel ... lien <a href="lirelasuiteacteur4">Lire la suite</a>
-		</h3>
-		</p>
-	</div>
-	<div id="acteur5">
-		<h3>acteur 5. contenu textuel ... lien<a href="lirelasuiteacteur5">Lire la suite</a>
-		</h3>
-	</div>
-	<div id="acteur6">
-		<h3>acteur 6. contenu textuel ... lien a href="lirelasuiteacteur6">Lire la suite</a>
-		</h3>
-	</div>
-</section>
-<hr />
+<!-- Section acteurs -->
+		<section id="section_acteurs">
+			<h2>Les partenaires et acteurs du secteur bancaire</h2>
+			<p>
+				Nous vous proposons un point d’entrée unique, répertoriant un grand nombre d’informations sur les partenaires et acteurs du groupe ainsi que sur les produits et services bancaires et financiers :
+			</p>
+				<div class="acteur">
+					<figure>
+						<img src="images/logo_acteur1.png" id="logo_acteur1" alt="logo de formation and co" />
+					</figure>
+					<h3>Formation&co</h3>
+					<p> 
+						Association française présente sur tout le territoire.
+						Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.
 
+					</p>
+					<a href="#">Formation&co</a> <a href="#">Lire la suite</a>
+				</div>
+				<div class="acteur">
+					<figure>
+						<img src="images/logo_acteur2.png" id="logo_acteur2" alt="logo de protectpeople" />
+					</figure>
+					<h3>Protectpeople</h3>
+					<p>
+						Finance la solidarité nationale.
+						Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale.
+
+					</p>
+					<a href="#">Protectpeople</a> <a href="#">Lire la suite</a>
+				</div>
+				<div class="acteur">
+					<figure>
+						<img src="images/logo_acteur3.png" id="logo_acteur3" alt="logo de dsa france" />
+					</figure>
+					<h3>DSA France</h3>
+					<p>
+						Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
+						Nous accompagnons les entreprises dans les étapes clés de leur évolution.
+	
+					</p>
+					<a href="#">DSA France</a> <a href="#">Lire la suite</a>
+				</div>
+				<div class="acteur">
+					<figure>
+						<img src="images/logo_acteur4.png" id="logo_acteur4" alt="logo de dse" />
+					</figure>
+					<h3>CDE</h3>
+					<p>
+						La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
+
+					</p>
+					<a href="#">CDE</a> <a href="#">Lire la suite</a>
+				</div>
+				<div class="acteur">
+					<h3>Acteur 5</h3>
+					<p> 
+						Texte paragraphe
+					</p>
+					<a href="#">Acteur 5</a>
+					<a href="#">Lire la suite</a>
+				</div>
+				<div class="acteur">
+					<h3>Acteur 6</h3>
+					<p>
+						Texte paragraphe
+					</p>
+					<a href="#">Acteur 6</a>
+					<a href="#">Lire la suite</a>
+				</div>
+		</section>
+		</div>
 <!-- Pied de page -->
-<section id="footer">
-	<a href="mentionslegales">Mentions l&eacute;gales</a>
-	<a href="contact">Contact</a>
-</section>
-</body>
+		<section id="footer">
+			<a href="#">Mentions l&eacute;gales</a>
+			<a href="#">Contact</a>
+		</section>
+	</body>
 </html>
 <!-- Fin -->
