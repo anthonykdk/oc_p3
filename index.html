@@ -8,65 +8,66 @@
 
 <!-- Corps de la page-->
 	<body>
+
 <!-- Header -->
 		<header>
 			<figure>
 				<img id="logo_header" src="images/logo.png" alt="logo de GBAF" />
 			</figure>
+			
+			<div id="nom_prenom_utilisateur">
+				<img id="logo_login" src="images/logo_login.png">
+				<login>Nom et prénom</login>
+			</div>
 
-		<div id="nom_prenom_utilisateur">
-			<img id="logo_login" src="images/logo_login.png">
-			<login>Nom et prénom</login>
-		</div>
+			<div id="formulaire_identification">
+				<label for="username">Identifiant :</label>
+				<input type="text" id="username" name="username" required 
+				minlength="4" maxlength="20" size="20">
 
-		<div id="formulaire_identification">
-			<label for="username">Identifiant :</label>
-			<input type="text" id="username" name="username" required 
-			minlength="4" maxlength="20" size="20">
+				<label for="password">Mot de passe :</label>
+				<input type="password" id="password" name="password" required 
+				minlength="4" maxlength="20" size="20">
+				<button>Valider</button>
+				<p>
+					Pas encore de compte ? <a href="#">Créer un compte</a>
+				</p>
+			</div>
 
-			<label for="password">Mot de passe :</label>
-			<input type="password" id="password" name="password" required 
-			minlength="4" maxlength="20" size="20">
-			<button>Valider</button>
-			<p>
-				Pas encore de compte ? <a href="#">Créer un compte</a>
-			</p>
-		</div>
+			<div id="creation_compte">
+				<p>
+					Créer un compte
+				</p>
+				<label for="name">Nom :</label>
+				<input type="text" id="name" name="name" required 
+				minlength="4" maxlength="20" size="20">
 
-		<div id="creation_compte">
-			<p>
-				Créer un compte
-			</p>
-			<label for="name">Nom :</label>
-			<input type="text" id="name" name="name" required 
-			minlength="4" maxlength="20" size="20">
+				<label for="firstname">Prénom :</label>
+				<input type="text" id="firstname" name="firstname" required 
+				minlength="4" maxlength="20" size="20">
 
-			<label for="firstname">Prénom :</label>
-			<input type="text" id="firstname" name="firstname" required 
-			minlength="4" maxlength="20" size="20">
+				<label for="username">Identifiant :</label>
+				<input type="text" id="username" name="username" required 
+				minlength="4" maxlength="20" size="20">
 
-			<label for="username">Identifiant :</label>
-			<input type="text" id="username" name="username" required 
-			minlength="4" maxlength="20" size="20">
+				<label for="password">Mot de passe :</label>
+				<input type="password" id="password" name="password" required 
+				minlength="4" maxlength="20" size="20">
 
-			<label for="password">Mot de passe :</label>
-			<input type="password" id="password" name="password" required 
-			minlength="4" maxlength="20" size="20">
+				<label for="secretquestion">Question secrète :</label>
+				<input type="text" id="secretquestion" name="secretquestion" required 
+				minlength="4" maxlength="20" size="20">
 
-			<label for="secretquestion">Question secrète :</label>
-			<input type="text" id="secretquestion" name="secretquestion" required 
-			minlength="4" maxlength="20" size="20">
-
-			<label for="answer_secretquestion">Réponse à la question secrète :</label>
-			<input type="text" id="answer_secretquestion" name="answer_secretquestion" required 
-			minlength="4" maxlength="20" size="20">
-
-			<button>Valider</button>
-		</div>
+				<label for="answer_secretquestion">Réponse à la question secrète :</label>
+				<input type="text" id="answer_secretquestion" name="answer_secretquestion" required 
+				minlength="4" maxlength="20" size="20">
+				<button>Valider</button>
+			</div>
 
 		</header>
 
 		<div id="contenu_apres_login">
+
 <!-- Section presentation -->
 		<section id="section_presentation">
 			<h1 id="titre_gbaf_subheader">Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
@@ -76,6 +77,7 @@
 		</section>
 
 <!-- Section acteurs -->
+
 		<section id="section_acteurs">
 			<h2 id="titre_section_acteurs">Les partenaires et acteurs du secteur bancaire</h2>
 			<p id=description_partenaires_acteurs>
@@ -89,10 +91,12 @@
 					<h3>Formation&co</h3>
 					<p> 
 						Association française présente sur tout le territoire.
-						Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.
-
+						Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé. 
+						<br /><a href="#">Site web de Formation&co</a>
 					</p>
-					<a href="#">Formation&co</a> <a href="#">Lire la suite</a>
+					<div class="lien_lirelasuite">
+						Lire la suite
+					</div>
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -101,10 +105,12 @@
 					<h3>Protectpeople</h3>
 					<p>
 						Finance la solidarité nationale.
-						Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale.
-
+						Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale. <br />
+						<a href="#">Site web de Protectpeople</a>
 					</p>
-					<a href="#">Protectpeople</a> <a href="#">Lire la suite</a>
+					<div class="lien_lirelasuite">
+				    	Lire la suite</a>
+				    </div>
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -114,9 +120,11 @@
 					<p>
 						Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
 						Nous accompagnons les entreprises dans les étapes clés de leur évolution.
-	
+						<br /><a href="#">Site web de DSA France</a>
 					</p>
-					<a href="#">DSA France</a> <a href="#">Lire la suite</a>
+					<div class="lien_lirelasuite">
+				    	Lire la suite</a>
+				    </div>
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -125,29 +133,36 @@
 					<h3>CDE</h3>
 					<p>
 						La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
-
+						<br /><a href="#">Site web de CDE</a>
 					</p>
-					<a href="#">CDE</a> <a href="#">Lire la suite</a>
+					<div class="lien_lirelasuite">
+				    	Lire la suite</a>
+				    </div>
 				</div>
 				<div class="bloc_acteur">
 					<h3>Acteur 5</h3>
 					<p> 
 						Texte paragraphe
+						<br /> <a href="#">Site web Acteur 5</a>
 					</p>
-					<a href="#">Acteur 5</a>
-					<a href="#">Lire la suite</a>
+					<div class="lien_lirelasuite">
+				    	Lire la suite</a>
+				    </div>
 				</div>
 				<div class="bloc_acteur">
 					<h3>Acteur 6</h3>
 					<p>
 						Texte paragraphe
+						<br /><a href="#">Site web Acteur 6</a>
 					</p>
-					<a href="#">Acteur 6</a>
-					<a href="#">Lire la suite</a>
+					<div class="lien_lirelasuite">
+				    	Lire la suite</a>
+				    </div>
 				</div>
 			</div>
 		</section>
 		</div>
+
 <!-- Pied de page -->
 		<section id="section_footer">
 			<a href="#">Mentions l&eacute;gales</a>
