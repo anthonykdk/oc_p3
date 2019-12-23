@@ -10,29 +10,52 @@
 	<body>
 
 <!-- Header -->
-		<header>
-			<figure>
-				<img id="logo_header" src="images/logo.png" alt="logo de GBAF" />
-			</figure>
+	<header>
+		<figure>
+			<img id="logo_header" src="images/logo.png" alt="logo de GBAF" />
+		</figure>
 			
-			<div id="nom_prenom_utilisateur">
+		<div id="nom_prenom_utilisateur">
 				<img id="logo_login" src="images/logo_login.png" alt="icone utilisateur">
 				Nom et prénom
-			</div>
+		</div>
+	</header>
 
-			<div id="formulaire_identification">
-				<label for="username">Identifiant :</label>
-				<input type="text" id="username" name="username" required 
-				minlength="4" maxlength="20" size="20">
+<!-- Login -->
 
-				<label for="password">Mot de passe :</label>
-				<input type="password" id="password" name="password" required 
-				minlength="4" maxlength="20" size="20">
-				<button>Valider</button>
-				<p>
-					Pas encore de compte ? <a href="#">Créer un compte</a>
-				</p>
+		<div id="page_identification">
+
+					
+			<div id="login_welcome">
+			Bienvenue sur l'extranet de GBAF <br /> <em>Veuillez vous identifier</em>
 			</div>
+			<br />		
+			<div id="conteneur_login">
+				<div class="element_username">
+				
+					<label for="username_login">Identifiant<br /></label>
+					<input type="text" id="username_login" name="username_login" required 
+					minlength="4" maxlength="20" size="25">
+				</div>
+			
+				<div class="element_password">
+					<label for="password_login">Mot de passe<br /></label>
+					<input type="password" id="password_login" name="password_login" required 
+					minlength="4" maxlength="20" size="25">
+				</div>
+
+				<div class="element_valider">
+					<br /><button>Valider</button>
+				</div>
+			</div>
+			<div id="login_createaccount">
+				
+			Pas encore de compte ? <a href="#">Créer un compte</a>
+
+			</div>
+				
+				
+			
 
 			<div id="creation_compte">
 				<p>
@@ -63,14 +86,17 @@
 				minlength="4" maxlength="20" size="20">
 				<button>Valider</button>
 			</div>
+		</div>
 
-		</header>
-
-		<div id="contenu_apres_login">
+		
 
 <!-- Section presentation -->
+
+
+		<div id="contenu_page">
+
 		<section id="section_presentation">
-			<h1 id="titre_gbaf_subheader">Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
+			<h1 id="titre_gbaf_subheader">GBAF, Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
 			<figure>
 				<img id="image_presentation" src="images/illustration_500x197.jpg" alt="illustration de presentation" />
 			</figure>
@@ -94,9 +120,10 @@
 						Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé. 
 						<br /><a href="#">Site web de Formation&co</a>
 					</p>
-					<div class="lien_lirelasuite">
+					<a id="lien_lirelasuite" href="#">
 						Lire la suite
-					</div>
+					</a>
+					
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -108,9 +135,12 @@
 						Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale. <br />
 						<a href="#">Site web de Protectpeople</a>
 					</p>
-					<div class="lien_lirelasuite">
-				    	Lire la suite
-				    </div>
+					</p>
+					<a id="lien_lirelasuite" href="#">
+					<div class="lirelasuite">
+						Lire la suite
+					</div>
+					</a>
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -122,9 +152,11 @@
 						Nous accompagnons les entreprises dans les étapes clés de leur évolution.
 						<br /><a href="#">Site web de DSA France</a>
 					</p>
-					<div class="lien_lirelasuite">
-				    	Lire la suite
-				    </div>
+					<a id="lien_lirelasuite" href="#">
+					<div class="lirelasuite">
+						Lire la suite
+					</div>
+					</a>
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -135,29 +167,11 @@
 						La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
 						<br /><a href="#">Site web de CDE</a>
 					</p>
-					<div class="lien_lirelasuite">
-				    	Lire la suite
-				    </div>
-				</div>
-				<div class="bloc_acteur">
-					<h3>Acteur 5</h3>
-					<p> 
-						Texte paragraphe
-						<br /> <a href="#">Site web Acteur 5</a>
-					</p>
-					<div class="lien_lirelasuite">
-				    	Lire la suite
-				    </div>
-				</div>
-				<div class="bloc_acteur">
-					<h3>Acteur 6</h3>
-					<p>
-						Texte paragraphe
-						<br /><a href="#">Site web Acteur 6</a>
-					</p>
-					<div class="lien_lirelasuite">
-				    	Lire la suite
-				    </div>
+					<a id="lien_lirelasuite" href="#">
+					<div class="lirelasuite">
+						Lire la suite
+					</div>
+					</a>
 				</div>
 			</div>
 		</section>

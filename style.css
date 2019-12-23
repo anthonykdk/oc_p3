@@ -1,15 +1,38 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* PAGE INDEX.HTML */
-
-body 
-{	
-	background-color: #F8F8F8;
+@font-face {
+font-family: 'lato light';
+src: url('fonts/Lato-Light.ttf');
+font-weight: normal;
+font-style: normal;
 }
 
-header 
-{
+/* Elements principaux */
+
+body {	
+	background-color: #F8F8F8;
+	font-family: lato light;
+}
+
+p, li {
+	margin-left: 40px;
+}
+
+h1, h2, h3 {
+	font-size: 1.2em;
+	margin-left: 40px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+
+/* --- Partie header --- */
+
+header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -17,129 +40,119 @@ header
 	border: 1px solid #959595;
 }
 
-figure {}
+/* Logo GBAF */
 
-
-#logo_header 
-{
-	width: 120px;
-	height: 120px;
+#logo_header {
+	width: 80px;
+	height: auto;
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
-#nom_prenom_utilisateur 
-{
+/* Tout ce qui est de l'identification */
+
+#page_identification {
 	display: none;
 }
 
-#logo_login 
-{
+/* Une fois identifie(e) */
+
+#nom_prenom_utilisateur {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+}
+
+#logo_login {
 	width: 30px;
 	height: 30px;
 	margin-right: 10px;
 }
 
-login 
-{
-	text-align: right;
-	margin-top: 3px;
+#contenu_page {
+	display: block;
 }
 
-#formulaire_identification 
-{
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-right: 20px;
+/* Login utilisateur sur premiere page */
+
+#conteneur_login {
+	display: flex;
+	justify-content: center;
+	border: 1px dotted #959595;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	background: #FFFFFF;
 }
 
-#username {}
-
-#password {}
-
-button {}
-
-p, li 
-{
-	margin-left: 40px;
+label {
+	font-size: 0.85em;
 }
 
+#login_welcome, #login_createaccount {
+	text-align: center;
+}
 
-#creation_compte 
-{
+#login_welcome {
+	margin-top: 150px;
+	margin-bottom: 20px;
+}
+
+#login_createaccount {
+	margin-top: 50px;
+	margin-bottom: 200px;
+	font-size: 0.85em;
+}
+
+/* Partie creation de compte */
+
+#creation_compte {
 	display: none;
 }
 
-#name {}
+/* --- Partie presentation sur index.html --- */
 
-#firstname {}
-
-#secretquestion {}
-
-#answer_secretquestion {}
-
-#contenu_apres_login {}
-
-#titre_gbaf_subheader 
-{
+#titre_gbaf_subheader {
 	margin-top: 40px;
 }
 
-#section_presentation 
-{
+#section_presentation {
 	clear: both;
 }
 
-#image_presentation
-{
+#image_presentation {
 	width: 100%;
 	height: 40%;
 	border: 3px dotted #959595;
 	margin-top: 30px;
 }
 
-h1, h2, h3 
-{
-	font-size: 1.2em;
-	margin-left: 40px;
-}
+/* --- Partie acteurs sur index.html --- */
 
-#titre_section_acteurs
-{
+#titre_section_acteurs {
 	text-align: center;
 	margin-top: 60px;
 }
 
-#description_partenaires_acteurs 
-{
+#description_partenaires_acteurs {
 	font-style: italic;
 	text-align: center;
 	margin-bottom: 60px;
 }
 
-a 
-{
-	margin-left: 40px;
-}
-
-#section_acteurs {}
-
-#conteneur_acteurs 
-{
+#conteneur_acteurs {
 	display: flex;
 	flex-direction: column;
 	border: 1px solid #959595;
 }
 
-.bloc_acteur 
-{
+.bloc_acteur {
 	border: 1px #959595 solid;
 	margin: 10px;
 	padding: 20px;
 }
 
-.lien_lirelasuite {
-
+.lien_lirelasuite, #lien_lirelasuite {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -150,27 +163,31 @@ a
 	height: 30px;
 	margin-left: 80%;
 	margin-top: 20px;
+	text-decoration: none;
+	color: #959595;
+	font-weight: 600;
 }
 
-#logo_acteur1, #logo_acteur2, #logo_acteur3, #logo_acteur4 
-{
+#logo_acteur1, #logo_acteur2, #logo_acteur3, #logo_acteur4 {
 	width: 30%;
 	height: 30%;
 	border: 1px solid #959595;
 }
 
+/* --- Partie footer --- */
+
 #section_footer
 {
-
 	margin-top: 40px;
 	text-align: center;
 }
 
 
-/* PAGE ACTEUR.HTML */
 
-#pageacteur_username 
-{
+/* Header sur acteur.html */
+
+
+#pageacteur_username {
 	margin-right: 20px;
 	margin-bottom: 100px;
 	display: flex;
@@ -178,59 +195,64 @@ a
 	align-items: center;
 }
 
-#page_acteur_logo_acteur1
-{
+/* Section acteur sur acteur.html */
+
+#page_acteur_logo_acteur1 {
 	text-align: center;
 }
 
-#page_acteur_logo_acteur1 img
+#section_acteur img
 {
-	width: 30%;
-	height: 30%;
+	width: 300px;
+	height: auto;
 	border: 1px #959595 solid;
 	margin-top: 70px;
+	margin-bottom: 75px;	
 }
 
-#titre_acteur1, #texte_presentation_acteur1
-{
+#lien_vers_acteur {
+	margin-left: 40px;
+}
+
+#titre_acteur1, #texte_presentation_acteur1 {
 	margin-top: 50px;
 	text-align: justify;
 	margin-right: 40px;
 }
 
-#section_commentaires
-{
+/* Section commentaires sur acteur.html */
+
+#section_commentaires {
 	border: 1px #959595 solid;
 	background-color: white;
 	margin-top: 100px;
 }
 
-#conteneur_entete_sectioncommentaire 
-{
+#conteneur_entete_sectioncommentaire {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-#conteneur_commentaires
-{
+#conteneur_commentaires {
 	margin-left: 40px;
 }
 
-.commentaire
-{
+.commentaire {
 	border: 1px #959595 solid;
 	margin-top: 20px;
 	margin-right: 40px;
+	margin-left: 40px;
 	margin-bottom: 20px;
 	border-radius: 10px;
 	padding: 20px;
 }
 
-.nombre_commentaire {}
+button {
+	margin-left: 40px;
+}
 
-.nouveau_commentaire
-{
+.nouveau_commentaire {
 	margin-left: 50%;
 	border: 1px #959595 solid;
 	border-radius: 10px;
@@ -243,8 +265,7 @@ a
 	font-size: 0.8em;
 }
 
-.nombre_likes
-{
+.nombre_likes {
 	margin-left: 20px;
 	border: 1px #959595 solid;
 	border-radius: 10px;
@@ -260,8 +281,7 @@ a
 	justify-content: space-around;
 }
 
-.nombre_likes img
-{
+.nombre_likes img {
 	width: 20%;
 	height: 20%;
 }
