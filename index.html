@@ -5,58 +5,46 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>Extranet de GBAF</title>
 	</head>
-
 <!-- Corps de la page-->
 	<body>
-
 <!-- Header -->
 	<header>
 		<figure>
-			<img id="logo_header" src="images/logo.png" alt="logo de GBAF" />
-		</figure>
-			
+			<a href="#"><img id="logo_header" src="images/logo.png" alt="logo de GBAF" /></a>
+		</figure>	
 		<div id="nom_prenom_utilisateur">
 				<img id="logo_login" src="images/logo_login.png" alt="icone utilisateur">
 				Nom et prénom
 		</div>
 	</header>
-
 <!-- Login -->
-
-		<div id="page_identification">
-
-					
+		<div id="page_identification">	
 			<div id="login_welcome">
-			Bienvenue sur l'extranet de GBAF <br /> <em>Veuillez vous identifier</em>
+				<div id="welcome_text">• Bienvenue sur l'extranet de GBAF •</div>
+				<div id="pleaselogin_text">Veuillez vous identifier.</div>
 			</div>
 			<br />		
-			<div id="conteneur_login">
+			<div id="formulaire_login">
 				<div class="element_username">
-				
 					<label for="username_login">Identifiant<br /></label>
 					<input type="text" id="username_login" name="username_login" required 
 					minlength="4" maxlength="20" size="25">
 				</div>
-			
 				<div class="element_password">
 					<label for="password_login">Mot de passe<br /></label>
 					<input type="password" id="password_login" name="password_login" required 
 					minlength="4" maxlength="20" size="25">
 				</div>
-
 				<div class="element_valider">
-					<br /><button>Valider</button>
+					<br /><button>Valider</button>	
 				</div>
 			</div>
-			<div id="login_createaccount">
-				
-			Pas encore de compte ? <a href="#">Créer un compte</a>
+	
 
+			<div id="login_createaccount">	
+				Pas encore de compte ? <a href="#">Créer un compte</a>
 			</div>
-				
-				
-			
-
+<!-- Creation de compte -->
 			<div id="creation_compte">
 				<p>
 					Créer un compte
@@ -64,49 +52,36 @@
 				<label for="name">Nom :</label>
 				<input type="text" id="name" name="name" required 
 				minlength="4" maxlength="20" size="20">
-
 				<label for="firstname">Prénom :</label>
 				<input type="text" id="firstname" name="firstname" required 
 				minlength="4" maxlength="20" size="20">
-
 				<label for="username">Identifiant :</label>
 				<input type="text" id="username" name="username" required 
 				minlength="4" maxlength="20" size="20">
-
 				<label for="password">Mot de passe :</label>
 				<input type="password" id="password" name="password" required 
 				minlength="4" maxlength="20" size="20">
-
 				<label for="secretquestion">Question secrète :</label>
 				<input type="text" id="secretquestion" name="secretquestion" required 
 				minlength="4" maxlength="20" size="20">
-
 				<label for="answer_secretquestion">Réponse à la question secrète :</label>
 				<input type="text" id="answer_secretquestion" name="answer_secretquestion" required 
 				minlength="4" maxlength="20" size="20">
 				<button>Valider</button>
 			</div>
 		</div>
-
-		
-
 <!-- Section presentation -->
-
-
-		<div id="contenu_page">
-
+	<div id="contenu_page">
 		<section id="section_presentation">
-			<h1 id="titre_gbaf_subheader">GBAF, Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
+			<h1 id="titre_gbaf">GBAF, Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
 			<figure>
 				<img id="image_presentation" src="images/illustration_500x197.jpg" alt="illustration de presentation" />
 			</figure>
 		</section>
-
 <!-- Section acteurs -->
-
 		<section id="section_acteurs">
 			<h2 id="titre_section_acteurs">Les partenaires et acteurs du secteur bancaire</h2>
-			<p id=description_partenaires_acteurs>
+			<p id="description_partenaires_acteurs">
 				Nous vous proposons un point d’entrée unique, répertoriant un grand nombre d’informations sur les partenaires et acteurs du groupe ainsi que sur les produits et services bancaires et financiers.
 			</p>
 			<div id="conteneur_acteurs">	
@@ -120,10 +95,7 @@
 						Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé. 
 						<br /><a href="#">Site web de Formation&co</a>
 					</p>
-					<a id="lien_lirelasuite" href="#">
-						Lire la suite
-					</a>
-					
+					<a id="lien_lirelasuite" href="#">Lire la suite</a>	
 				</div>
 				<div class="bloc_acteur">
 					<figure>
@@ -134,7 +106,6 @@
 						Finance la solidarité nationale.
 						Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale. <br />
 						<a href="#">Site web de Protectpeople</a>
-					</p>
 					</p>
 					<a id="lien_lirelasuite" href="#">
 					<div class="lirelasuite">
@@ -175,13 +146,11 @@
 				</div>
 			</div>
 		</section>
-		</div>
+	</div>
 
 <!-- Pied de page -->
 		<section id="section_footer">
-			<a href="#">Mentions l&eacute;gales</a>
-			<a href="#">Contact</a>
+			| <a href="#">Mentions légales</a> | <a href="#">Contact</a> |
 		</section>
 	</body>
 </html>
-<!-- Fin -->

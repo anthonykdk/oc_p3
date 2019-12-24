@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* Ajout de polices */
+
 @font-face {
 font-family: 'lato light';
 src: url('fonts/Lato-Light.ttf');
@@ -8,7 +10,21 @@ font-weight: normal;
 font-style: normal;
 }
 
-/* Elements principaux */
+@font-face {
+font-family: 'lato thin';
+src: url('fonts/Lato-Thin.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'lato lightitalic';
+src: url('fonts/Lato-LightItalic.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+/* ELEMENTS PRINCIPAUX */
 
 body {	
 	background-color: #F8F8F8;
@@ -27,20 +43,17 @@ h1, h2, h3 {
 a {
 	text-decoration: none;
 	color: black;
-	font-weight: 600;
+	font-weight: 700;
 }
 
-/* --- Partie header --- */
+/* HEADER */
 
 header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	background-color: white;
-	border: 1px solid #959595;
 }
-
-/* Logo GBAF */
 
 #logo_header {
 	width: 80px;
@@ -49,18 +62,20 @@ header {
 	margin-bottom: auto;
 }
 
-/* Tout ce qui est de l'identification */
+/* IDENTIFICATION */
 
 #page_identification {
-	display: none;
+	display: block;
 }
 
-/* Une fois identifie(e) */
-
 #nom_prenom_utilisateur {
-	display: flex;
+	display: none;
 	align-items: center;
 	margin-right: 20px;
+}
+
+#contenu_page {
+	display: none;
 }
 
 #logo_login {
@@ -69,24 +84,23 @@ header {
 	margin-right: 10px;
 }
 
-#contenu_page {
-	display: block;
-}
+/* Identification - Premiere page */
 
-/* Login utilisateur sur premiere page */
-
-#conteneur_login {
+#formulaire_login {
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	border: 1px dotted #959595;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 20px;
-	background: #FFFFFF;
+	padding: 50px;
+	background-color: white;
+	border: 1px dashed #2C2C2C;
 }
 
 label {
-	font-size: 0.85em;
+	font-size: 0.8em;
+	font-weight: 600;
+	color: #2C2C2C;
 }
 
 #login_welcome, #login_createaccount {
@@ -94,25 +108,68 @@ label {
 }
 
 #login_welcome {
-	margin-top: 150px;
-	margin-bottom: 20px;
+	margin-top: 80px;
+	margin-bottom: 40px;
+	color: #2C2C2C;
+}
+
+#welcome_text {
+	font-size: 1.5em;
+	font-family: lato thin;
+}
+
+#pleaselogin_text {
+	margin-top: 90px;
+	margin-bottom: 1px;
+	font-family: lato lightitalic;
+	font-weight: 500;
+}
+
+#username_login {
+	margin-right: 25px;
+	margin-top: 8px;
+	font-size: 1em;
+}
+
+#password_login {
+	margin-top: 8px;
+	font-size: 1em;
+}
+
+.element_valider button {
+	margin-left: 25px;
+	margin-top: 7px;
+	padding: 6px;
+	background-color: #f51f28;
+	border: 1px dotted #f51f28;
+	border-radius: 20px;
+	width: 70px;
+	color: white;
+}
+
+input {
+	border: 1px dotted #2C2C2C;
+	border-radius: 7px;
+	padding: 3px;
 }
 
 #login_createaccount {
-	margin-top: 50px;
+	font-family: lato thin;
+	margin-top: 60px;
 	margin-bottom: 200px;
 	font-size: 0.85em;
+	color: #2C2C2C;
 }
 
-/* Partie creation de compte */
+/* CREATION DE COMPTE */
 
 #creation_compte {
 	display: none;
 }
 
-/* --- Partie presentation sur index.html --- */
+/* INDEX.HTML - SECTION PRESENTATION */
 
-#titre_gbaf_subheader {
+#titre_gbaf {
 	margin-top: 40px;
 }
 
@@ -127,7 +184,7 @@ label {
 	margin-top: 30px;
 }
 
-/* --- Partie acteurs sur index.html --- */
+/* INDEX.HTML - SECTION ACTEURS */
 
 #titre_section_acteurs {
 	text-align: center;
@@ -174,35 +231,25 @@ label {
 	border: 1px solid #959595;
 }
 
-/* --- Partie footer --- */
+/* SECTION FOOTER */
 
-#section_footer
-{
+#section_footer {
 	margin-top: 40px;
 	text-align: center;
+	font-size: 0.8em;
+	color: #FFFFFF;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #181818;
 }
 
-
-
-/* Header sur acteur.html */
-
-
-#pageacteur_username {
-	margin-right: 20px;
-	margin-bottom: 100px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+#section_footer a {
+	color: #FFFFFF;
 }
 
-/* Section acteur sur acteur.html */
+/* ACTEUR HTML - SECTION ACTEUR */
 
-#page_acteur_logo_acteur1 {
-	text-align: center;
-}
-
-#section_acteur img
-{
+#section_acteur img {
 	width: 300px;
 	height: auto;
 	border: 1px #959595 solid;
@@ -214,28 +261,12 @@ label {
 	margin-left: 40px;
 }
 
-#titre_acteur1, #texte_presentation_acteur1 {
-	margin-top: 50px;
-	text-align: justify;
-	margin-right: 40px;
-}
-
-/* Section commentaires sur acteur.html */
+/* ACTEUR.HTML - SECTION COMMENTAIRES */
 
 #section_commentaires {
 	border: 1px #959595 solid;
 	background-color: white;
 	margin-top: 100px;
-}
-
-#conteneur_entete_sectioncommentaire {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#conteneur_commentaires {
-	margin-left: 40px;
 }
 
 .commentaire {
@@ -250,38 +281,4 @@ label {
 
 button {
 	margin-left: 40px;
-}
-
-.nouveau_commentaire {
-	margin-left: 50%;
-	border: 1px #959595 solid;
-	border-radius: 10px;
-	text-align: center;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 10px;
-	font-size: 0.8em;
-}
-
-.nombre_likes {
-	margin-left: 20px;
-	border: 1px #959595 solid;
-	border-radius: 10px;
-	text-align: center;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-top: 10px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-}
-
-.nombre_likes img {
-	width: 20%;
-	height: 20%;
 }
