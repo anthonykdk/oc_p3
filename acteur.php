@@ -10,22 +10,11 @@
 	<body>
 
 <!-- Header -->
-	<header>
-		<figure>
-			<img id="logo_header" src="images/logo.png" alt="logo de GBAF" />
-		</figure>
-			
-		<div id="nom_prenom_utilisateur">
-				<img id="logo_login" src="images/logo_login.png" alt="icone utilisateur">
-				Nom et prénom
-		</div>
-	</header>
-
-<!-- DEBUT PAGE ACTEUR -->
+	<?php
+	include 'header.php'
+	?>
 
 <!-- Section acteur -->
-
-
 		<section id="section_acteur">
 			<figure>
 				<img src="images/logo_acteur1.png" alt="logo acteur 1">
@@ -45,6 +34,7 @@
 				Vous n’avez pas de diplômes ? Ce n’est pas un problème pour nous ! Nos financements s’adressent à tous.	
 			</p>
 		</section>
+		
 <!-- Section commentaires -->
 		<section id="section_commentaires">
 			<h3>X commentaires</h3>
@@ -67,25 +57,9 @@
 				</div>
 			</section>
 
-
-
-
-
-		
-
-
-
-	
-
-
-
-<!-- FIN PAGE ACTEUR -->
-
 <!-- Pied de page -->
-		<section id="section_footer">
-			<a href="#">Mentions l&eacute;gales</a>
-			<a href="#">Contact</a>
-		</section>
+	<?php
+	include 'footer.php'
+	?>
 	</body>
 </html>
-<!-- Fin -->

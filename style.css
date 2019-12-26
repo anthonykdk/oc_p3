@@ -253,6 +253,7 @@ input {
 	width: 300px;
 	height: auto;
 	border: 1px #959595 solid;
+	border-radius: 20px;
 	margin-top: 70px;
 	margin-bottom: 75px;	
 }
@@ -264,13 +265,13 @@ input {
 /* ACTEUR.HTML - SECTION COMMENTAIRES */
 
 #section_commentaires {
-	border: 1px #959595 solid;
+	border: 1px #2C2C2C dashed;
 	background-color: white;
 	margin-top: 100px;
 }
 
 .commentaire {
-	border: 1px #959595 solid;
+	border: 1px #2C2C2C dotted;
 	margin-top: 20px;
 	margin-right: 40px;
 	margin-left: 40px;

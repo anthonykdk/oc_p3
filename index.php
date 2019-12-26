@@ -5,18 +5,15 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>Extranet de GBAF</title>
 	</head>
+	
 <!-- Corps de la page-->
 	<body>
+
 <!-- Header -->
-	<header>
-		<figure>
-			<a href="#"><img id="logo_header" src="images/logo.png" alt="logo de GBAF" /></a>
-		</figure>	
-		<div id="nom_prenom_utilisateur">
-				<img id="logo_login" src="images/logo_login.png" alt="icone utilisateur">
-				Nom et prénom
-		</div>
-	</header>
+	<?php
+	include 'header.php'
+	?>
+
 <!-- Login -->
 		<div id="page_identification">	
 			<div id="login_welcome">
@@ -44,6 +41,7 @@
 			<div id="login_createaccount">	
 				Pas encore de compte ? <a href="#">Créer un compte</a>
 			</div>
+
 <!-- Creation de compte -->
 			<div id="creation_compte">
 				<p>
@@ -70,6 +68,7 @@
 				<button>Valider</button>
 			</div>
 		</div>
+
 <!-- Section presentation -->
 	<div id="contenu_page">
 		<section id="section_presentation">
@@ -78,6 +77,7 @@
 				<img id="image_presentation" src="images/illustration_500x197.jpg" alt="illustration de presentation" />
 			</figure>
 		</section>
+
 <!-- Section acteurs -->
 		<section id="section_acteurs">
 			<h2 id="titre_section_acteurs">Les partenaires et acteurs du secteur bancaire</h2>
@@ -149,8 +149,8 @@
 	</div>
 
 <!-- Pied de page -->
-		<section id="section_footer">
-			| <a href="#">Mentions légales</a> | <a href="#">Contact</a> |
-		</section>
+	<?php
+	include 'footer.php'
+	?>
 	</body>
 </html>
