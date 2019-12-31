@@ -2,7 +2,7 @@
 
 	<div id="contenu_page">
 		<section id="section_presentation">
-			<h1 id="titre_gbaf">GBAF, Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
+			<h1 id="titre_gbaf">Groupement Banque-Assurance Français <br /><em>Le représentant de la profession bancaire et des assureurs en France.</em></h1>
 			<figure>
 				<img id="image_presentation" src="images/illustration_500x197.jpg" alt="illustration de presentation" />
 			</figure>
@@ -43,7 +43,7 @@ while ($donnees = $reponse->fetch()) // On fait une boucle avec while afin d'aff
 					<p> 
 						<?php echo $donnees['description']; ?> 
 					</p>
-					<a href="<?php echo $donnees['lien']; ?>">Site web du partenaire</a>
+					<a id="lien_vers_acteur_index" href="<?php echo $donnees['lien']; ?>">Site web du partenaire</a>
 					<a id="lien_lirelasuite" href="#">Lire la suite</a>
 				</div>
 			</div>
