@@ -1,4 +1,3 @@
-<!DOCTYPE html> 
 <html>
 	<head>
 		<meta charset="UTF-8" />
@@ -7,14 +6,17 @@
 	</head>
 
 <!-- Corps de la page-->
+
 	<body>
 
 <!-- Header -->
+
 	<?php
 	include 'header.php'
 	?>
 
 <!-- Section acteur -->
+
 		<section id="section_acteur">
 			<figure>
 				<img src="images/logo_acteur1.png" alt="logo acteur 1">
@@ -36,30 +38,47 @@
 		</section>
 		
 <!-- Section commentaires -->
+
 		<section id="section_commentaires">
 			<h3>X commentaires</h3>
 			<button>Nouveau commentaire</button>
 			<button>Likes</button>
+
+<!-- Connection a la BDD -->
+<?php
+try // on se connecte a la BDD avec PDO
+{
+	$bdd = new PDO('mysql:host=anthonykondek.com;dbname=kdomaine_gbaf;charset=utf8', 'kdomaine_akondek', 'anthony2020', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // permet de se connecter a la BDD
+}
+catch (Exception $e)
+{
+	die('Erreur : ' . $e->getMessage()); // On affiche une erreur si la connection a la BDD est impossible
+}
+
+$reponse = $bdd->query('SELECT * FROM commentaires ORDER BY id_comments'); // On récupère tout le contenu de la table comptes_utilisateur
+
+while ($donnees = $reponse->fetch()) // On fait une boucle avec while afin d'afficher chaque entrée une à une
+{
+?>		
 			<div class="commentaire">
-				<div class="firstname_comment">Prenom</div>
-				<div class="date_comment">Date</div>
-				<div class="text_comment">Texte</div>
+				<div class="firstname_comment"><?php echo $donnees['prenom']; ?> </div>
+				<div class="date_comment"> <?php echo $donnees['date']; ?> </div>
+				<div class="text_comment"> <p><?php echo $donnees['texte']; ?> </p> </div>
 			</div>
-			<div class="commentaire">
-				<div class="firstname_comment">Prenom</div>
-				<div class="date_comment">Date</div>
-				<div class="text_comment">Texte</div>
-			</div>
-			<div class="commentaire">
-				<div class="firstname_comment">Prenom</div>
-				<div class="date_comment">Date</div>
-				<div class="text_comment">Texte</div>
-				</div>
-			</section>
+<?php
+}
+
+$reponse->closeCursor(); // Termine le traitement de la requête
+
+?>
+
+		</section>
 
 <!-- Pied de page -->
+
 	<?php
 	include 'footer.php'
 	?>
+	
 	</body>
 </html>

@@ -1,3 +1,17 @@
+<?php // on se connecte a la BDD via PDO
+try
+{
+	$bdd = new PDO('mysql:host=anthonykondek.com;dbname=kdomaine_gbaf;charset=utf8', 'kdomaine_akondek', 'anthony2020', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e)
+{
+	die('Erreur : ' . $e->getMessage()); // Si impossible de s'y connecter affichage d'un message d'erreur
+}
+?>
+
+
+<!-- PROBLEMATIQUE : Le fait d'enlever DOCTYPE hmtl sur cette page provoque un bug : les images des acteurs n'apparaissent plus... vraiment etrange :O. Alors que celui de la page acteur.php a pu etre enleve et pas de soucis...-->
+
 <!DOCTYPE html> 
 <html>
 	<head>
@@ -7,150 +21,44 @@
 	</head>
 	
 <!-- Corps de la page-->
+
 	<body>
 
 <!-- Header -->
-	<?php
-	include 'header.php'
-	?>
 
-<!-- Login -->
-		<div id="page_identification">	
-			<div id="login_welcome">
-				<div id="welcome_text">• Bienvenue sur l'extranet de GBAF •</div>
-				<div id="pleaselogin_text">Veuillez vous identifier.</div>
-			</div>
-			<br />		
-			<div id="formulaire_login">
-				<div class="element_username">
-					<label for="username_login">Identifiant<br /></label>
-					<input type="text" id="username_login" name="username_login" required 
-					minlength="4" maxlength="20" size="25">
-				</div>
-				<div class="element_password">
-					<label for="password_login">Mot de passe<br /></label>
-					<input type="password" id="password_login" name="password_login" required 
-					minlength="4" maxlength="20" size="25">
-				</div>
-				<div class="element_valider">
-					<br /><button>Valider</button>	
-				</div>
-			</div>
+<?php
+	require 'header.php'
+?>
+
+
+<!-- Envoi du formulaire login -->
+
+<?php
+   	if (isset($_POST['username_login']) AND $_POST['username_login'] ==  "anthony" AND isset($_POST['password_login']) AND $_POST['password_login'] ==  "2020" ) // Controle si l'identifiant et le mot de passe correspondent...
+ {
+?>
+
+<?php
+	require 'homepage_content.php' // Si c'est ok on affiche le contenu de la page (presentation et liste acteurs)
+?>
+
+<?php
+}
+else
+{
+?>
 	
+<?php
+	require 'homepage_login.php'; // Sinon on reste sur le login
+}
+?>
 
-			<div id="login_createaccount">	
-				Pas encore de compte ? <a href="#">Créer un compte</a>
-			</div>
-
-<!-- Creation de compte -->
-			<div id="creation_compte">
-				<p>
-					Créer un compte
-				</p>
-				<label for="name">Nom :</label>
-				<input type="text" id="name" name="name" required 
-				minlength="4" maxlength="20" size="20">
-				<label for="firstname">Prénom :</label>
-				<input type="text" id="firstname" name="firstname" required 
-				minlength="4" maxlength="20" size="20">
-				<label for="username">Identifiant :</label>
-				<input type="text" id="username" name="username" required 
-				minlength="4" maxlength="20" size="20">
-				<label for="password">Mot de passe :</label>
-				<input type="password" id="password" name="password" required 
-				minlength="4" maxlength="20" size="20">
-				<label for="secretquestion">Question secrète :</label>
-				<input type="text" id="secretquestion" name="secretquestion" required 
-				minlength="4" maxlength="20" size="20">
-				<label for="answer_secretquestion">Réponse à la question secrète :</label>
-				<input type="text" id="answer_secretquestion" name="answer_secretquestion" required 
-				minlength="4" maxlength="20" size="20">
-				<button>Valider</button>
-			</div>
-		</div>
-
-<!-- Section presentation -->
-	<div id="contenu_page">
-		<section id="section_presentation">
-			<h1 id="titre_gbaf">GBAF, Groupement Banque Assurance Français. <br /><em>Le représentant de la profession bancaire et des assureurs en France</em></h1>
-			<figure>
-				<img id="image_presentation" src="images/illustration_500x197.jpg" alt="illustration de presentation" />
-			</figure>
-		</section>
-
-<!-- Section acteurs -->
-		<section id="section_acteurs">
-			<h2 id="titre_section_acteurs">Les partenaires et acteurs du secteur bancaire</h2>
-			<p id="description_partenaires_acteurs">
-				Nous vous proposons un point d’entrée unique, répertoriant un grand nombre d’informations sur les partenaires et acteurs du groupe ainsi que sur les produits et services bancaires et financiers.
-			</p>
-			<div id="conteneur_acteurs">	
-				<div class="bloc_acteur">
-					<figure>
-						<img src="images/logo_acteur1.png" id="logo_acteur1" alt="logo de formation and co" />
-					</figure>
-					<h3>Formation&co</h3>
-					<p> 
-						Association française présente sur tout le territoire.
-						Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé. 
-						<br /><a href="#">Site web de Formation&co</a>
-					</p>
-					<a id="lien_lirelasuite" href="#">Lire la suite</a>	
-				</div>
-				<div class="bloc_acteur">
-					<figure>
-						<img src="images/logo_acteur2.png" id="logo_acteur2" alt="logo de protectpeople" />
-					</figure>
-					<h3>Protectpeople</h3>
-					<p>
-						Finance la solidarité nationale.
-						Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale. <br />
-						<a href="#">Site web de Protectpeople</a>
-					</p>
-					<a id="lien_lirelasuite" href="#">
-					<div class="lirelasuite">
-						Lire la suite
-					</div>
-					</a>
-				</div>
-				<div class="bloc_acteur">
-					<figure>
-						<img src="images/logo_acteur3.png" id="logo_acteur3" alt="logo de dsa france" />
-					</figure>
-					<h3>DSA France</h3>
-					<p>
-						Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
-						Nous accompagnons les entreprises dans les étapes clés de leur évolution.
-						<br /><a href="#">Site web de DSA France</a>
-					</p>
-					<a id="lien_lirelasuite" href="#">
-					<div class="lirelasuite">
-						Lire la suite
-					</div>
-					</a>
-				</div>
-				<div class="bloc_acteur">
-					<figure>
-						<img src="images/logo_acteur4.png" id="logo_acteur4" alt="logo de dse" />
-					</figure>
-					<h3>CDE</h3>
-					<p>
-						La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
-						<br /><a href="#">Site web de CDE</a>
-					</p>
-					<a id="lien_lirelasuite" href="#">
-					<div class="lirelasuite">
-						Lire la suite
-					</div>
-					</a>
-				</div>
-			</div>
-		</section>
-	</div>
 
 <!-- Pied de page -->
-	<?php
-	include 'footer.php'
-	?>
+
+<?php
+	require 'footer.php'
+?>
+
 	</body>
 </html>
