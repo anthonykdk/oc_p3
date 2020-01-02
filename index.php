@@ -9,7 +9,6 @@ catch (Exception $e)
 }
 ?>
 
-
 <!-- PROBLEMATIQUE : Le fait d'enlever DOCTYPE hmtl sur cette page provoque un bug : les images des acteurs n'apparaissent plus... vraiment etrange :O. Alors que celui de la page acteur.php a pu etre enleve et pas de soucis...-->
 
 <!DOCTYPE html> 
@@ -29,7 +28,6 @@ catch (Exception $e)
 <?php
 	require 'header.php'
 ?>
-
 
 <!-- Envoi du formulaire login -->
 
