@@ -47,11 +47,27 @@ h1, h2, h3 {
 a {
 	text-decoration: none;
 	color: black;
-	font-weight: 600;
 }
 
+button {
+	margin-left: 40px;
+}
+
+label {
+	font-size: 0.8em;
+	font-weight: 600;
+	color: black;
+	margin-left: 40px;
+}
 
 /* HEADER */
+
+#header_homepage {
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	margin-left: 8px;
+}
 
 
 #header_content {
@@ -82,7 +98,7 @@ a {
 }
 
 
-/* IDENTIFICATION */
+/* LOGIN */
 
 
 .page_identification {
@@ -100,30 +116,22 @@ a {
 	margin-right: 10px;
 }
 
-
-/* Identification - Premiere page */
-
-
 #formulaire_login {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	padding: 50px;
 	background-color: white;
-	border: 1px dashed #2C2C2C;
 }
 
-label {
-	font-size: 0.8em;
-	font-weight: 600;
-	color: #2C2C2C;
-	margin-left: 60px;
-}
 
 #login_welcome, #login_createaccount {
 	text-align: center;
+}
+
+#login_createaccount a {
+	font-weight: 600;
 }
 
 #login_welcome {
@@ -144,31 +152,35 @@ label {
 }
 
 #username_login {
-	margin-right: 10px;
+	margin-right: 12px;
 	margin-top: 6px;
 	font-size: 1em;
 }
 
 #password_login {
 	margin-top: 6px;
+	margin-right: 10px;
 	font-size: 1em;
 }
 
 .element_valider button {
-	margin-left: 17px;
-	margin-top: 6px;
-	padding: 6px;
-	background-color: #f51f28;
+	margin-top: 6.5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: white;
 	border: 1px solid #f51f28;
 	border-radius: 20px;
-	width: 70px;
-	color: white;
+	color: #f51f28;
+	font-size: 0.63em;
+	font-weight: 600;
 }
 
 #formulaire_login input {
-	border: 1px dotted #2C2C2C;
+	border: 1px dotted black;
 	border-radius: 7px;
-	padding: 3px;
+	padding: 2px;
 }
 
 #login_createaccount {
@@ -180,56 +192,26 @@ label {
 }
 
 
-/* REGISTRATION.PHP */
+/* REGISTER.PHP */
 
 
 #titre_creeruncompte {
 	margin-top: 50px;
 	font-size: 1.5em;
 	font-family: lato thin;
-	text-align: center;
-	margin-right: 45px;
 }
 
 #pleasecomplete_registration p {
 	margin-top: 30px;
 	font-family: lato lightitalic;
 	font-weight: 500;
-	text-align: center;
-	margin-right: 45px;	
+	margin-bottom: 30px;
 }
-
-#block_namefirstname {
-	margin-top: 70px;
-}
-
-#block_namefirstname, #block_usernamepassword, #block_validation {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.blockq_secretquestion {
-
-text-align: center;
-margin-top: 30px;
-
-}
-
-.blockq_answer {
-	margin-top: 20px;
-	text-align: center;
-}
-
-.blockq_answer label {
-	padding-right: 217px;
-}
-
 
 #formulaire_inscription label, input {
 	margin-bottom: 17px;
-	margin-right: 60px;
-	margin-left: 60px;
+	margin-left: 40px;
+
 }
 
 #formulaire_inscription input {
@@ -240,38 +222,26 @@ margin-top: 30px;
 }
 
 #block_validation button {
-	margin-top: 50px;
-	margin-bottom: 44px;
-	margin-right: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: 600;
 }
 
 .prev_button button {
-	margin-left: 17px;
-	margin-top: 6px;
+	margin-left: 40px;
 	padding: 6px;
 	background-color: white;
-	border: 1px sild black;
 	border-radius: 20px;
 	width: 70px;
 }
 
-
-#name_registration, #firstname_registration, #username_registration, #password_registration, #answerquestion_registration {
-	margin-top: 2px;
+#maquestion, #question_secrete {
+	margin-left: 40px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
-
-/* RESET_PASSWORD.PHP */
-
-
-#form_resetpassword {
-	display: flex;
-	justify-content: center;
-	margin-top: 50px;
-}
-
-
-/* INDEX.HTML - SECTION PRESENTATION */
+/* INDEX.PHP - SECTION PRESENTATION */
 
 
 #titre_gbaf {
@@ -290,7 +260,7 @@ margin-top: 30px;
 }
 
 
-/* INDEX.HTML - SECTION ACTEURS */
+/* INDEX.PHP - SECTION ACTEURS */
 
 
 #titre_section_acteurs {
@@ -307,32 +277,39 @@ margin-top: 30px;
 #conteneur_acteurs {
 	display: flex;
 	flex-direction: column;
-	border: 1px solid #959595;
+	border: 1px solid #dfdfdf;
+	background-color: white;
+	margin-top: 20px;
 }
 
 .bloc_acteur {
-	border: 1px #959595 solid;
+	border: 1px #dfdfdf dotted;
 	margin: 10px;
 	padding: 20px;
+	background-color: white;
 }
 
 #lien_vers_acteur_index {
 	margin-left: 40px;
+	color: gray;
 }
 
-.lien_lirelasuite, #lien_lirelasuite {
+#lien_lirelasuite {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	border: 1px #959595 solid;
-	border-radius: 10px;
+	border: 1px solid #f51f28;
+	border-radius: 20px;
 	width: 100px;
 	height: 30px;
 	margin-left: 80%;
 	margin-top: 20px;
-	text-decoration: none;
-	color: #959595;
+	color: #f51f28;
+	font-weight: 600;
+	font-size: 0.8em;
+	padding-left: 7px;
+	padding-right: 7px;
 	font-weight: 600;
 }
 
@@ -343,7 +320,7 @@ margin-top: 30px;
 }
 
 
-/* SECTION FOOTER */
+/* FOOTER */
 
 
 #section_footer {
@@ -361,7 +338,7 @@ margin-top: 30px;
 }
 
 
-/* ACTEUR HTML - SECTION ACTEUR */
+/* ACTOR.PHP - SECTION ACTEUR */
 
 
 #section_acteur img {
@@ -378,13 +355,14 @@ margin-top: 30px;
 }
 
 
-/* ACTEUR.HTML - SECTION COMMENTAIRES */
+/* ACTOR.PHP - SECTION COMMENTAIRES */
 
 
 #section_commentaires {
-	border: 1px #2C2C2C dashed;
 	background-color: white;
 	margin-top: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .commentaire {
@@ -397,6 +375,14 @@ margin-top: 30px;
 	padding: 20px;
 }
 
-button {
-	margin-left: 40px;
+/* COMMENT.PHP */
+
+#fullform_comment label {
+	font-size: 1em;
+}
+
+#form_writecomment 
+{
+    height: 500px;
+    width: 500px;
 }

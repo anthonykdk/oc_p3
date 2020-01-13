@@ -1,0 +1,1 @@
+alert("Connexion impossible : identifiant ou mot de passe incorrect.");

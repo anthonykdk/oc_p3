@@ -1,9 +1,7 @@
-<!-- Login -->
-
 <div id="page_identification">	
 	<div id="login_welcome">
-		<div id="welcome_text">• Bienvenue sur l'extranet de GBAF •</div>
-		<div id="pleaselogin_text">Veuillez vous identifier.</div>
+		<div id="welcome_text">• Bienvenue •</div>
+		<div id="pleaselogin_text">Veuillez vous authentifier.</div>
 	</div>
 	<br />		
 
@@ -11,10 +9,10 @@
 
 		<div class="element_username">
 
-		<form action="index.php" method="post">
+		<form action="index.php" method="POST">
 
 			<label for="username_login">Identifiant<br /></label>
-			<input type="text" id="username_login" name="username_login" required 
+			<input type="text" id="username_login" name="username_login" value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>" required 
 			minlength="4" maxlength="20" size="25">
 		</div>
 
@@ -25,7 +23,7 @@
 		</div>
 
 		<div class="element_valider">
-			<br /><button>Valider</button>	
+			<br /><button>Connexion</button>
 		</div>
 
 		</form>
@@ -33,5 +31,5 @@
 	</div>
 	
 	<div id="login_createaccount">	
-		Impossible de vous connecter actuellement ? <br /><br /><a href="registration.php">Créer un compte</a> <br /> <a href="reset_password.php">Mot de passe oublié</a>
+		Impossible de vous connecter ? <br /><br /><a href="register.php">Créer un compte</a> <br /> <a href="password.php">Mot de passe oublié</a>
 	</div>
